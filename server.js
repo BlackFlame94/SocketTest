@@ -12,7 +12,7 @@ io.on("connection", (socket) => {
 })
 
 app.get("/", (req, res) => {
-	res.end("Halabudj")
+	res.end("Halabudj2")
 })
 
 httpServer.listen(3000)
