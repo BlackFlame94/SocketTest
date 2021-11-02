@@ -11,4 +11,8 @@ io.on("connection", (socket) => {
 	socket.on("msg", data => console.log(data))
 })
 
+app.get("/", (req, res) => {
+	res.end("Halabudj")
+})
+
 httpServer.listen(3000)
