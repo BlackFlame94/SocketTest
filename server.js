@@ -12,7 +12,7 @@ io.on("connection", (socket) => {
 })
 
 app.get("/", (req, res) => {
-	res.end(`Main Araguns`)
+	res.end(`${process.env.NODE_ENV === 'production' ? 'Main:' : 'Dev:'} Araguns`)
 })
 
-httpServer.listen(process.env.PORT || 3000)
+httpServer.listen(process.env.NODE_ENV === 'production' ? 3000 : 3010)
