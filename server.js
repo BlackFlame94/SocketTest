@@ -16,4 +16,4 @@ app.get("/", (req, res) => {
 	res.end(`Main Araguns`)
 })
 
-httpServer.listen(config.PORT)
+httpServer.listen(process.env.PORT || 3000)
