@@ -35,5 +35,5 @@ jobs:
             cd /var/www/api-shard-casino
             git checkout dev
             git pull
-            pm2 restart 1
+            NODE_ENV=development pm2 restart 1 --update-env
             
