@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build Test
+name: Build Main
 
 # Controls when the workflow will run
 on:
@@ -34,6 +34,7 @@ jobs:
           passphrase: ${{secrets.SSH_PASS}}
           script: |
             cd /var/www/api-shard-casino
+            git checkout main
             git pull
             pm2 restart 0
             
