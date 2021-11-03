@@ -1,6 +1,7 @@
 const express = require("express")
 const { createServer } = require("http")
 const { Server } = require("socket.io")
+const { config } = require("./config")
 
 const app = express()
 const httpServer = createServer(app)
@@ -12,7 +13,7 @@ io.on("connection", (socket) => {
 })
 
 app.get("/", (req, res) => {
-	res.end("El Pepe!")
+	res.end(`Main Araguns`)
 })
 
-httpServer.listen(3000)
+httpServer.listen(config.PORT)
