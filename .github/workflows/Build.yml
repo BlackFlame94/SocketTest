@@ -36,5 +36,5 @@ jobs:
             cd /var/www/api-shard-casino
             git checkout main
             git pull
-            pm2 restart 0
+            PORT=3000 pm2 restart 0 --update-env
             
